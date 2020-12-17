@@ -1,39 +1,112 @@
+#  Trust over IP - Specification Template
+This repo is a [GitHub Repo Template][1] for creating GitHub repositories within the ToIP GitHub Organization. Newly generated repos will contain all the necessary code for using Spec-Up for the development of [ToIP Deliverables][2].
 
+The **ToIP Spec-Up Theme** is a ready-to-use customized version of [Spec-Up][3] that provides a ToIP branded environment for the development of technical specifications.
+
+##
 
 <p align="center">
 
-<img src="./logo.png">
+<img src="./assets/default/logo.svg">
 
 <h3 style="display: block; margin: 0 auto; text-align: center;">Markdown » Spec-Up</h3>
 
 </p>
 
-
-
 Spec-Up is a technical specification development tool that enables you to create rich specification documents for standards bodies and engineering projects by writing in an extended version of markdown that features all the bells and whistles - for example: advanced syntax highlighting, notice blocks, complex tables, charts, UML diagrams, and more.
 
-Using Spec-Up is easy peasy lemon squeezy:
+## Purpose
+This repo has been developed to address the [requirements](https://github.com/decentralized-identity/spec-up/issues/11) of [ToIP Foundation][5] contributors with respect to the [authoring process][6] for [ToIP Deliverables][2].
 
-1. `npm install spec-up`
-2. Create a `specs.json` file at the root of your project to specify configuration values used in the generation of your spec documents. The values in your `specs.json` file include things like where your spec's markdown files are located, where to output the generated spec document, and various metadata values used in rendering, such as the title, logo, and repo links for each of your specs. The following are the required/optional fields supported in the `specs.json` config file:
+## Acknowledgements
+This repo is derived from the fine work of Daniel Buchner and his [Spec Generator](https://github.com/decentralized-identity/spec-up) with [Express ](http://expressjs.com/) enhancements suggested by [Daniel N. Gisolfi](https://github.com/dgisolfi).
 
-    - **`public_root`** _(PATH STRING, optional)_ - For some platforms and services where you may want to output your rendered spec, the pathing may differ from the directory structure of your local project. To account for this, you can use the `public_root` property to specify the insertion of a path segment to account for the different in pathing between your local renders and wherever you publish your spec to.
-    - **`specs`** _(ARRAY, required)_ - the `specs` array contains descriptor objects for each of the specs you are generating in your project, and are composed of the following required and optional properties:
-        - **`spec_directory`** _(STRING, required)_ - You must specify the project root relative location of your spec's markdown file directory. You MUST name your spec's markdown file `spec.md` and locate it in your `spec_directory` for the tool to automatically find and use it for rendering. If you want to use a different name for the markdown file, or you have multiple markdown files you would like the tool to assemble into one document, you must specify them using the optional`markdown_paths` field described below.
-        - **`title`** _(STRING, required)_ - You must add a title for your spec, which will be rendered in the generated document's H1 text and page title.
-        - **`logo`** _(PATH/URI STRING, optional)_ - You may add a reference to a logo asset, either via a path to the asset or a URI
-        - **`logo_link`** _(URI STRING, optional)_ - The URI you want your logo to point to in the rendered page.
-        - **`markdown_paths`** _(ARRAY, optional)_ - If you want to name your spec's markdown file something other than `spec.md`, or you have multiple files you would like assembled into a single output document, you must specify their paths as array entries in the order you would like them assembled. The paths in this array are assumed to be based on the `spec_directory` you specified, so _DO NOT_ repeat the full root relative path. 
-        - **`output_path`** _(STRING, optional)_ - If you want the generated spec document to be output to a different location than the `spec_directory` you specified (e.g. the project root for GitHub Pages publishing) you can specify another root relative path (use `./` for root), and the tool will write the document file there instead.
-        - **`source`** _(OBJECT, optional)_ - this object allows you to configure where repo-specific data is pulled from to power some of the more advanced repo-related features. To do this, specify the code hosting service by adding a service ID string to `host` (currently Spec-Up only supports `"github"`, but this is extensible), add the account/org the repo is located within via the `account` property, and add the repo name under the `repo` property. Here is an example configuration:
+## Contributor's Guide
+Once the new repo instance has been configured, Specification contributors should familiarize themselves with the [Contributor's Guide](https://github.com/trustoverip/spec-up/blob/main/DEV_README.md).
 
-            ```
-            {
-                "host": "github",
-                "account": "decentralized-identity",
-                "repo": "sidetree"
-            }
-            ```
-3. In your main node.js file, or as a package.json script entry, use this invocation call: `require('spec-up')()`
+## Usage
+The following instructions pertain to the initial configuration of a new repository instance that has been primed using the [trustoverip/spec-up GitHub Repo Template][12].
 
-Boom! That's it. Spec-Up will auto-detect modifications to files in your `spec_directory` and auto-generate your spec's updated HTML document every time you save a change.
+### Prime and clone a new repository
+1. Generate a new repository from this template repository (see [GitHub docs][7]).
+2. Clone the new repository (see [GitHub docs][8]).
+
+### Pick a theme style
+This repo supports the use of a *Specification* styled theme when the [ToIP Deliverable Type Indicator][9] is `TSS`. In all other cases, a contributors should consider using the ToIP themed repo for [MkDocs Material][4].
+
+### Configure Spec-Up
+
+In addition to the following instructions, please refer to the [Spec-Up Getting Started Guide](https://identity.foundation/spec-up/#getting-started).
+
+1. Open the repository using your favorite IDE (i.e. [Visual Studio Code][10], [Atom][11]).
+2. Edit the `specs.json` file.
+3. Review the `specs[]` array. By default, this arrays contains three (3) samples:
+
+    1. *Spec-Up Standalone Example*: Demonstration of how to use Spec-Up with a single standalone Markdown file, called `spec.md`.
+    2. *Spec-Up Multi-File Example*: Demonstration of how to use Spec-Up with an array of  Markdown files.
+    3. *ToIP TSS0000 SpecName*: A placeholder for a new ToIP Spec.
+4. Modify the `specs[]` array, using a combination of options:
+
+    1. Remove the Examples
+    2. Keep the Examples
+    3. Modify the TSS0000 entry
+    4. Extend the array with another entry, as this repo can be used to serve more than one specification. This may be appropriate when a single TSS requires related or dependency specifications.
+
+### Configure Express Server
+
+This Spec-Up repo uses a Node Express Server to server the web-application.
+
+1. Open the repository using your favorite IDE (i.e. [Visual Studio Code][10], [Atom][11]).
+2. Edit the `server.js` file.
+3. Update the `redirect` and web-site path information according to the specifications that will be hosted (as defined in `specs.json`). For indepth details on configuring an Express Server, please refer to the [Express API](http://expressjs.com/en/5x/api.html#res.sendFile).
+
+### Configure Makefile
+
+1. Open the repository using your favorite IDE (i.e. [Visual Studio Code][10], [Atom][11]).
+2. Edit the `Makefile` file and find the variables depicted below:
+
+    ```
+    REPO_NAME ?= TSS0000-some-new-spec
+    UPSTREAM_REPO ?= https://github.com/trustoverip/TSS0000-some-new-spec.git
+    DEV_SITE_PORT ?= 7600
+    SITE_DIR ?= spec_site/toip
+    ```
+
+3. Update the following settings:
+
+    1. `REPO_NAME`: Provide the GitHub repository name.
+    2. `UPSTREAM_REPO`: Set using the GitHub Repo Clone URL.
+    3. `DEV_SITE_PORT`: Pick a port that will be used for the local test server: _https://localhost:8080_
+    4. `SITE_DIR`: Use default or change relative path name for where the Markdown files for this new specification will be stored.
+
+### Update Readme
+1. Open the repository using your favorite IDE (i.e. [Visual Studio Code][10], [Atom][11]).
+2. Based on the type of deliverable that will be associated with this new repo, copy the appropriate `template` from the [templates folder within the trustoverip/deliverables repo][15] to `./archive/SUGGESTED_OUTLINE.md`.
+3. Move `README.md` to the `archive` folder. Rename it to `ORIGINAL_INSTRUCTIONS.md`.
+4. Rename `DOC_README.md` to `README.md`
+5. Update `README.md` accordingly.
+
+    1. At the top of your file modify the _title_ so it is in the form:
+
+        ```
+        <TypeIndicator><4digitID>: Friendly Version of Your Title.
+        ```
+
+    2. Refer to the _Contribution Options_ of the [ToIP Deliverables Portal][14].
+
+
+[1]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository
+[2]: https://github.com/trustoverip/deliverables/blob/master/_process/work_products.md
+[3]: https://identity.foundation/spec-up/
+[4]: https://github.com/trustoverip/mkdocs-material
+[5]: https://trustoverip.org
+[6]: https://trustoverip.github.io/deliverables/process/process_concepts/
+[7]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
+[8]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+[9]: https://trustoverip.github.io/deliverables/process/work_product_mgmt/#type-indicators
+[10]: https://code.visualstudio.com/
+[11]: https://atom.io
+[12]: https://github.com/trustoverip/spec-up
+[13]: https://en.wikipedia.org/wiki/YAML#:~:text=yaml.org,is%20being%20stored%20or%20transmitted.
+[14]: https://trustoverip.github.io/deliverables/
+[15]: https://github.com/trustoverip/deliverables/tree/master/templates

@@ -1,7 +1,7 @@
 Spec-Up Multi-File Example
 ==================
 
-**Specification Status:** Strawman
+**Specification Status:** DRAFT
 
 **Latest Draft:**
   [https://github.com/decentralized-identity/spec-up](https://github.com/decentralized-identity/spec-up)

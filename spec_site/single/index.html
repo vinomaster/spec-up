@@ -1,0 +1,639 @@
+
+              <!DOCTYPE html>
+              <html lang="en">
+                <head>
+                  <meta charset="utf-8">
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+                  <title>Spec-Up Standalone Example</title>
+
+                  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap" rel="stylesheet">
+
+                  <link href="assets/css/custom-elements.css" rel="stylesheet"/><link href="assets/css/prism.css" rel="stylesheet"/><link href="assets/css/chart.css" rel="stylesheet"/><link href="assets/css/index.css" rel="stylesheet"/><link href="/custom-assets/custom.css" rel="stylesheet"/><script src="assets/js/utils.js"></script><script src="assets/js/custom-elements.js"></script><script src="/custom-assets/custom-head.js"></script>
+                </head>
+                <body features="source logo">
+                  
+                  <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="svg-github" viewBox="0 0 20 20">
+    <path d="M10 0.247c-5.522 0-10 4.477-10 10 0 4.418 2.865 8.167 6.839 9.489 0.5 0.093 0.683-0.217 0.683-0.481 0-0.238-0.009-1.026-0.014-1.862-2.782 0.605-3.369-1.18-3.369-1.18-0.455-1.156-1.11-1.463-1.11-1.463-0.907-0.621 0.069-0.608 0.069-0.608 1.004 0.071 1.533 1.031 1.533 1.031 0.892 1.529 2.339 1.087 2.91 0.831 0.090-0.646 0.349-1.087 0.635-1.337-2.221-0.253-4.556-1.11-4.556-4.942 0-1.092 0.391-1.984 1.030-2.684-0.104-0.252-0.446-1.269 0.097-2.646 0 0 0.84-0.269 2.751 1.025 0.798-0.222 1.653-0.333 2.503-0.337 0.85 0.004 1.706 0.115 2.505 0.337 1.909-1.294 2.747-1.025 2.747-1.025 0.544 1.378 0.202 2.395 0.098 2.646 0.641 0.7 1.029 1.592 1.029 2.684 0 3.841-2.339 4.687-4.566 4.934 0.359 0.31 0.678 0.919 0.678 1.852 0 1.338-0.012 2.415-0.012 2.744 0 0.266 0.18 0.578 0.687 0.48 3.971-1.324 6.833-5.071 6.833-9.488 0-5.523-4.477-10-10-10z"></path>
+  </symbol>
+  <symbol id="svg-nested-list" viewBox="0 0 37 32">
+    <path d="M0 2.286c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM9.143 0h27.429v4.571h-27.429zM9.143 11.429c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM18.286 9.143h18.286v4.571h-18.286zM9.143 29.714c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM18.286 27.429h18.286v4.571h-18.286zM18.286 20.571c0-1.262 1.023-2.286 2.286-2.286s2.286 1.023 2.286 2.286c0 1.262-1.023 2.286-2.286 2.286s-2.286-1.023-2.286-2.286zM27.429 18.286h9.143v4.571h-9.143z"></path>
+  </symbol>
+</svg>
+      
+                  <main>
+      
+                    <header id="header" class="panel-header">
+                      <span id="toc_toggle" panel-toggle="toc">
+                        <svg icon><use xlink:href="#svg-nested-list"></use></svg>
+                      </span>
+                      <a id="logo" href="https://github.com/csuwildcat/spec-up">
+                        <img src="assets/default/logo.svg" />
+                      </a>
+                      <span issue-count animate panel-toggle="repo_issues">
+                        <svg icon><use xlink:href="#svg-github"></use></svg>
+                      </span>
+                    </header>
+      
+                    <article id="content">
+                      <h1 id="spec-up-example"><a class="toc-anchor" href="#spec-up-example" >§</a> Spec-Up Example</h1>
+<p><strong>Specification Status:</strong> proposal</p>
+<p><strong>Latest Draft:</strong>
+<a path-0="identity.foundation"path-1="spec-up"href="https://identity.foundation/spec-up" >https://identity.foundation/spec-up</a></p>
+<dl>
+<dt>Editors:</dt>
+<dd><a path-0="www.linkedin.com"path-1="in"path-2="dbuchner"path-3=""href="https://www.linkedin.com/in/dbuchner/" >Daniel Buchner</a></dd>
+<dt>Participate:</dt>
+<dd><a path-0="github.com"path-1="decentralized-identity"path-2="spec-up"href="https://github.com/decentralized-identity/spec-up" >GitHub repo</a></dd>
+<dd><a path-0="github.com"path-1="decentralized-identity"path-2="spec-up"path-3="issues"href="https://github.com/decentralized-identity/spec-up/issues" >File a bug</a></dd>
+<dd><a path-0="github.com"path-1="decentralized-identity"path-2="spec-up"path-3="commits"path-4="master"href="https://github.com/decentralized-identity/spec-up/commits/master" >Commit history</a></dd>
+</dl>
+<hr>
+<h2 id="abstract"><a class="toc-anchor" href="#abstract" >§</a> Abstract</h2>
+<p>Let’s face it, other tools and generators for writing technical specifications aimed at standards bodies or industry groups are cumbersome, underwhelming, and lack the features you might want in a technical specification document. Spec-Up’s goal is to deliver you a better spec-writing experience with far less effort and tedium than other tools in the ecosystem. Spec-Up is a simple tool that auto-generates great specs from markdown. The version of markdown Spec-up uses contains all the same features you might expect from common implementations, like GitHub, but adds much more, including notice blocks, complex tables, charts, advanced syntax highlighting, UML diagrams, etc.</p>
+<h2 id="getting-started"><a class="toc-anchor" href="#getting-started" >§</a> Getting Started</h2>
+<p>Using Spec-Up is easy peasy lemon squeezy:</p>
+<ol>
+<li>
+<p><code>npm install spec-up</code></p>
+</li>
+<li>
+<p>Create a <code>specs.json</code> file at the root of your project to specify configuration values used in the generation of your spec documents. The values in your <code>specs.json</code> file include things like where your spec’s markdown files are located, where to output the generated spec document, and various metadata values used in rendering, such as the title, logo, and repo links for each of your specs. The following are the required/optional fields supported in the <code>specs.json</code> config file:</p>
+<ul>
+<li><strong><code>spec_directory</code></strong> <em>(STRING, required)</em> - You must specify the project root relative location of your spec’s markdown file directory. You <strong><strong>MUST</strong></strong> name your spec’s markdown file <code>spec.md</code> and locate it in your <code>spec_directory</code> for the tool to automatically find and use it for rendering. If you want to use a different name for the markdown file, or you have multiple markdown files you would like the tool to assemble into one document, you must specify them using the optional<code>markdown_paths</code> field described below.</li>
+<li><strong><code>title</code></strong> <em>(STRING, required)</em> - You must add a title for your spec, which will be rendered in the generated document’s H1 text and page title.</li>
+<li><strong><code>markdown_paths</code></strong> <em>(ARRAY, optional)</em> - If you want to name your spec’s markdown file something other than <code>spec.md</code>, or you have multiple files you would like assembled into a single output document, you must specify their paths as array entries in the order you would like them assembled. The paths in this array are assumed to be based on the <code>spec_directory</code> you specified, so <em>DO NOT</em> repeat the full root relative path.</li>
+<li><strong><code>output_path</code></strong> <em>(STRING, optional)</em> - If you want the generated spec document to be output to a different location than the <code>spec_directory</code> you specified (e.g. the project root for GitHub Pages publishing) you can specify another root relative path (use <code>./</code> for root), and the tool will write the document file there instead.</li>
+</ul>
+</li>
+<li>
+<p>In your main node.js file, drop in this bad boy: <code>require('spec-up')()</code></p>
+</li>
+</ol>
+<p>Boom! That’s it. Spec-Up will auto-detect modifications to files in your <code>spec_directory</code> and auto-generate your spec’s updated HTML document every time you save a change.</p>
+<h2 id="table-of-contents"><a class="toc-anchor" href="#table-of-contents" >§</a> Table of Contents</h2>
+<p>&lt;-- You see that beautiful TOC over there to your left? (tap the header link to slide it out on mobile) Yeah, you don’t need to do a damn thing, that just magically appears based on your use of <code>h2</code>, <code>h3</code>, and <code>h4</code> headings.</p>
+<h2 id="term-references"><a class="toc-anchor" href="#term-references" >§</a> Term References</h2>
+<h3 id="definition-lists"><a class="toc-anchor" href="#definition-lists" >§</a> Definition Lists</h3>
+<p>Many specs may want to include a section for terminology references, and Definition Lists are a great way to do that. Here’s how to leverage Spec-Up’s automatic term reference features via Definition List markup:</p>
+<pre>
+[[def: Term 1, Term One]]:
+~ This is the first term we will define.
+
+[[def: Term 2, Term Two]]:
+~ This is the second term, but not the last.
+
+[[def: Term 3, Term Three]]:
+~ This is the last term, because you know what they say: third term's the charm!
+</pre>
+<dl>
+<dt><span id="term:term-one"><span id="term:term-1">Term 1</span></span>:</dt>
+<dd>This is the first term we will define.</dd>
+<dt><span id="term:term-two"><span id="term:term-2">Term 2</span></span>:</dt>
+<dd>This is the second term, but not the last.</dd>
+<dt><span id="term:term-three"><span id="term:term-3">Term 3</span></span>:</dt>
+<dd>This is the last term, because you know what they say: third term’s the charm!</dd>
+</dl>
+<p>Now let’s refer to some of the terms defined above to show how the auto-linking of terms works: <a class="term-reference" href="#term:term-1">Term 1</a>, <a class="term-reference" href="#term:term-two">Term Two</a>, <a class="term-reference" href="#term:term-3">Term 3</a>. Additionally, as long as you define your terms using Definition Lists (as seen in the markdown above), you will be able to hover any reference to a term to see a tooltip with its definition.</p>
+<h3 id="table-defined-terms"><a class="toc-anchor" href="#table-defined-terms" >§</a> Table-defined Terms</h3>
+<p>You can also reference table-oriented terms and definitions which are decomposed into heading-titled attributes in distinct cells:</p>
+<pre>
+Variable           | Default Value | Max Value
+------------------- | -------------- | ---------
+[[def: Variable 1]] | 123          | 9999
+</pre>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default Value</th>
+<th>Max Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="term:variable-1">Variable 1</span></td>
+<td>123</td>
+<td>9999</td>
+</tr>
+</tbody>
+</table>
+<p>Anytime you add a definition of a term in the first column of a table, like <a class="term-reference" href="#term:variable-1">Variable 1</a>, it will link to the cell and display a tooltip with the entire set of row values when you hover the term.</p>
+<h2 id="notices"><a class="toc-anchor" href="#notices" >§</a> Notices</h2>
+<pre>
+::: note Basic Note
+  Check this out.
+:::
+</pre>
+<div id="basic-note" class="notice note"><a class="notice-link" href="#basic-note">NOTE</a><p>Check this out.</p>
+</div>
+<div id="note-1" class="notice note"><a class="notice-link" href="#note-1">NOTE</a><p>Here’s another.</p>
+</div>
+<div id="note-2" class="notice note"><a class="notice-link" href="#note-2">NOTE</a><p>And one more!</p>
+</div>
+<div id="basic-note-1" class="notice note"><a class="notice-link" href="#basic-note-1">NOTE</a><p>One last note!!!</p>
+</div>
+<pre>
+::: issue Issue Notice
+  I take issue with that, kind sir.
+:::
+</pre>
+<div id="issue-notice" class="notice issue"><a class="notice-link" href="#issue-notice">ISSUE</a><p>I take issue with that, kind sir.</p>
+</div>
+<pre>
+::: warning Warning Notice
+  Houston, I think we have a problem
+:::
+</pre>
+<div id="warning-notice" class="notice warning"><a class="notice-link" href="#warning-notice">WARNING</a><p>Houston, I think we have a problem</p>
+</div>
+<pre>
+::: todo Really Important
+  Get this done!
+:::
+</pre>
+<div id="really-important" class="notice todo"><a class="notice-link" href="#really-important">TODO</a><p>Get this done!</p>
+</div>
+<pre>
+::: example Code Example
+  Put your code block here
+:::
+</pre>
+<div id="code-example" class="notice example"><a class="notice-link" href="#code-example">EXAMPLE</a><pre class="language-json"><code class="language-json"><span class="token comment">// Some comment in JSON</span>
+<span class="token punctuation">{</span>
+  <span class="token property">"foo"</span><span class="token operator">:</span> <span class="token string">"bar"</span><span class="token punctuation">,</span>
+  <span class="token property">"baz"</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+<h2 id="tables"><a class="toc-anchor" href="#tables" >§</a> Tables</h2>
+<pre>
+Stage | Direct Products | ATP Yields
+----: | --------------: | ---------:
+Glycolysis | 2 ATP ||
+^^ | 2 NADH | 3--5 ATP |
+Pyruvaye oxidation | 2 NADH | 5 ATP |
+Citric acid cycle | 2 ATP ||
+^^ | 6 NADH | 15 ATP |
+^^ | 2 FADH2 | 3 ATP |
+**30--32** ATP |||
+[Net ATP yields per hexose]
+</pre>
+<table>
+<caption id="netatpyieldsperhexose">Net ATP yields per hexose</caption>
+<thead>
+<tr>
+<th style="text-align:right">Stage</th>
+<th style="text-align:right">Direct Products</th>
+<th style="text-align:right">ATP Yields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right" rowspan="2">Glycolysis</td>
+<td style="text-align:right" colspan="2">2 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right">2 NADH</td>
+<td style="text-align:right">3–5 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right">Pyruvaye oxidation</td>
+<td style="text-align:right">2 NADH</td>
+<td style="text-align:right">5 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right" rowspan="3">Citric acid cycle</td>
+<td style="text-align:right" colspan="2">2 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right">6 NADH</td>
+<td style="text-align:right">15 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right">2 FADH2</td>
+<td style="text-align:right">3 ATP</td>
+</tr>
+<tr>
+<td style="text-align:right" colspan="3"><strong>30–32</strong> ATP</td>
+</tr>
+</tbody>
+</table>
+<pre>
+|--|--|--|--|--|--|--|--|
+|♜|  |♝|♛|♚|♝|♞|♜|
+|  |♟|♟|♟|  |♟|♟|♟|
+|♟|  |♞|  |  |  |  | |
+|  |♗|  |  |♟|  |  | |
+|  |  |  |  |♙|  |  | |
+|  |  |  |  |  |♘|  | |
+|♙|♙|♙|♙|  |♙|♙|♙|
+|♖|♘|♗|♕|♔|  |  |♖|
+</pre>
+<table>
+<tbody>
+<tr>
+<td>♜</td>
+<td></td>
+<td>♝</td>
+<td>♛</td>
+<td>♚</td>
+<td>♝</td>
+<td>♞</td>
+<td>♜</td>
+</tr>
+<tr>
+<td></td>
+<td>♟</td>
+<td>♟</td>
+<td>♟</td>
+<td></td>
+<td>♟</td>
+<td>♟</td>
+<td>♟</td>
+</tr>
+<tr>
+<td>♟</td>
+<td></td>
+<td>♞</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>♗</td>
+<td></td>
+<td></td>
+<td>♟</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>♙</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>♘</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>♙</td>
+<td>♙</td>
+<td>♙</td>
+<td>♙</td>
+<td></td>
+<td>♙</td>
+<td>♙</td>
+<td>♙</td>
+</tr>
+<tr>
+<td>♖</td>
+<td>♘</td>
+<td>♗</td>
+<td>♕</td>
+<td>♔</td>
+<td></td>
+<td></td>
+<td>♖</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sequence-diagrams"><a class="toc-anchor" href="#sequence-diagrams" >§</a> Sequence Diagrams</h2>
+<pre>
+```mermaid
+sequenceDiagram
+  Alice ->> Bob: Hello Bob, how are you?
+  Bob-->>John: How about you John?
+  Bob--x Alice: I am good thanks!
+  Bob-x John: I am good thanks!
+  Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+  Bob-->Alice: Checking with John...
+  Alice->John: Yes... John, how are you?
+```
+</pre>
+<div class="mermaid">
+sequenceDiagram
+  Alice ->> Bob: Hello Bob, how are you?
+  Bob-->>John: How about you John?
+  Bob--x Alice: I am good thanks!
+  Bob-x John: I am good thanks!
+  Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+  Bob-->Alice: Checking with John...
+  Alice->John: Yes... John, how are you?
+</div>
+<h2 id="flows"><a class="toc-anchor" href="#flows" >§</a> Flows</h2>
+<pre>
+```mermaid
+graph TD
+  A[Start] --> B{Is it?}
+  B -->|Yes| C[OK]
+  C --> D[Rethink]
+  D --> B
+  B -->|No| E[End]
+```
+</pre>
+<div class="mermaid">
+graph TD
+  A[Start] --> B{Is it?}
+  B -->|Yes| C[OK]
+  C --> D[Rethink]
+  D --> B
+  B -->|No| E[End]
+</div>
+<h2 id="charts"><a class="toc-anchor" href="#charts" >§</a> Charts</h2>
+<pre>
+```chart
+{
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ],
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  }
+}
+```
+</pre>
+<canvas class="chartjs">{"type":"pie","data":{"labels":["Red","Blue","Yellow"],"datasets":[{"data":[300,50,100],"backgroundColor":["#FF6384","#36A2EB","#FFCE56"],"hoverBackgroundColor":["#FF6384","#36A2EB","#FFCE56"]}]}}</canvas><h2 id="syntax-highlighting"><a class="toc-anchor" href="#syntax-highlighting" >§</a> Syntax Highlighting</h2>
+<pre>
+```json
+{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:example:123456789abcdefghi",
+  "authentication": [{
+    "id": "did:example:123456789abcdefghi#keys-1",
+    "type": "RsaVerificationKey2018",
+    "controller": "did:example:123456789abcdefghi",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
+  }],
+  "service": [{
+    "id":"did:example:123456789abcdefghi#vcs",
+    "type": "VerifiableCredentialService",
+    "serviceEndpoint": "https://example.com/vc/"
+  }]
+}
+```
+</pre>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"@context"</span><span class="token operator">:</span> <span class="token string">"https://www.w3.org/ns/did/v1"</span><span class="token punctuation">,</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:example:123456789abcdefghi"</span><span class="token punctuation">,</span>
+  <span class="token property">"authentication"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:example:123456789abcdefghi#keys-1"</span><span class="token punctuation">,</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"RsaVerificationKey2018"</span><span class="token punctuation">,</span>
+    <span class="token property">"controller"</span><span class="token operator">:</span> <span class="token string">"did:example:123456789abcdefghi"</span><span class="token punctuation">,</span>
+    <span class="token property">"publicKeyPem"</span><span class="token operator">:</span> <span class="token string">"-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"service"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"id"</span><span class="token operator">:</span><span class="token string">"did:example:123456789abcdefghi#vcs"</span><span class="token punctuation">,</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"VerifiableCredentialService"</span><span class="token punctuation">,</span>
+    <span class="token property">"serviceEndpoint"</span><span class="token operator">:</span> <span class="token string">"https://example.com/vc/"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<!-- ## TeX Math Equations
+
+The KaTeX math engine is used for TeX rendering. You can find a list of supported features and examples here: https://katex.org/docs/supported.html.
+
+
+$$\begin{pmatrix}x_2 \\ y_2 \end{pmatrix} =
+\begin{pmatrix} A & B \\ C & D \end{pmatrix}\cdot
+\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$$
+
+$$\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   a & b & c \\ \hline
+   d & e & f \\
+   \hdashline
+   g & h & i
+\end{array}$$
+
+$$
+\underbrace{a+b+c}_{\text{Note: such math, much wow.}}
+$$ -->
+<h2 id="tab-panels"><a class="toc-anchor" href="#tab-panels" >§</a> Tab Panels</h2>
+<tab-panels selected-index="0">
+  <nav>
+    <button type="button">First Tab</button>
+    <button type="button">Second Tab</button>
+  </nav>
+  <section>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"foo"</span><span class="token operator">:</span> <span class="token string">"foo"</span><span class="token punctuation">,</span>
+  <span class="token property">"baz"</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre>
+  </section>
+  <section>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"foo"</span><span class="token operator">:</span> <span class="token string">"bar"</span><span class="token punctuation">,</span>
+  <span class="token property">"baz"</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre>
+  </section>
+</tab-panels>
+<h2 id="fancy-links"><a class="toc-anchor" href="#fancy-links" >§</a> Fancy Links</h2>
+<p>Spec-Up automatically upgrades the links of certain sites, like GitHub. GitHub is the only supported site with Fancy Links right now, but we’ll be adding more as we go.</p>
+<h3 id="github"><a class="toc-anchor" href="#github" >§</a> GitHub</h3>
+<ul>
+<li><strong>Issues</strong>
+<ul>
+<li>Source: <code>https://github.com/decentralized-identity/presentation-exchange/issues/119</code></li>
+<li>Render: <a path-0="github.com"path-1="decentralized-identity"path-2="presentation-exchange"path-3="issues"path-4="119"href="https://github.com/decentralized-identity/presentation-exchange/issues/119" ><span>https://github.com/decentralized-identity/presentation-exchange/issues/119</span></a></li>
+</ul>
+</li>
+<li><strong>Pull Requests</strong>
+<ul>
+<li>Source: <code>https://github.com/decentralized-identity/sidetree/pull/863</code></li>
+<li>Render: <a path-0="github.com"path-1="decentralized-identity"path-2="sidetree"path-3="pull"path-4="863"href="https://github.com/decentralized-identity/sidetree/pull/863" ><span>https://github.com/decentralized-identity/sidetree/pull/863</span></a></li>
+</ul>
+</li>
+<li><strong>Releases</strong>
+<ul>
+<li>Source: <code>https://github.com/decentralized-identity/sidetree/releases/tag/v0.9.1</code></li>
+<li>Render: <a path-0="github.com"path-1="decentralized-identity"path-2="sidetree"path-3="releases"path-4="tag"path-5="v0.9.1"href="https://github.com/decentralized-identity/sidetree/releases/tag/v0.9.1" ><span>https://github.com/decentralized-identity/sidetree/releases/tag/v0.9.1</span></a></li>
+</ul>
+</li>
+<li><strong>Projects</strong>
+<ul>
+<li>Source: <code>https://github.com/decentralized-identity/sidetree/projects/1</code></li>
+<li>Render: <a path-0="github.com"path-1="decentralized-identity"path-2="sidetree"path-3="projects"path-4="1"href="https://github.com/decentralized-identity/sidetree/projects/1" ><span>https://github.com/decentralized-identity/sidetree/projects/1</span></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="external-spec-references"><a class="toc-anchor" href="#external-spec-references" >§</a> External Spec References</h2>
+<p>You can reference external specifications from IETF, W3C, and WHATWG as follows:</p>
+<ol>
+<li>Anywhere in your document you want to referece an external specification, use the <code>spec</code>-prefixed custom token format: <code>[[spec:RFC4122]]</code></li>
+<li>Wherever in your document you want to print out all your external specification references, use the <code>spec</code> custom token format <em>without any spec name</em>: <code>[[spec]]</code></li>
+</ol>
+<ul>
+<li>If you want to split up your references into groups (e.g. normative vs informative), just make sure to use dash-delimited unique reference grouping string in your custom tokens: <code>[[spec-norm:RFC4122]]</code>, <code>[[spec-inform:RFC4122]]</code>, <code>[[spec-foo:RFC4122]]</code>, etc.</li>
+<li>To print out a custom group’s references, just include the grouping string for a given set of references in a custom token <em>without any spec name</em>: <code>[[spec-norm]]</code>, <code>[[spec-inform]]</code>, <code>[[spec-foo]]</code>.</li>
+</ul>
+<p>Here are a set of example references that are distributed among the reference groups <code>spec</code>, <code>spec-norm</code>, <code>spec-inform</code>:</p>
+<ul>
+<li>[<a class="spec-reference" href="#ref:RFC3548">RFC3548</a>] (<code>[[spec:RFC3548]]</code>)</li>
+<li>[<a class="spec-reference" href="#ref:RFC7518">RFC7518</a>] (<code>[[spec:RFC7518]]</code>)</li>
+<li>[<a class="spec-reference" href="#ref:DID-CORE">DID-CORE</a>] (<code>[[spec-norm:DID-CORE]]</code>)</li>
+<li>[<a class="spec-reference" href="#ref:DID-SPEC-REGISTRIES">DID-SPEC-REGISTRIES</a>] (<code>[[spec-norm:DID-SPEC-REGISTRIES]]</code>)</li>
+<li>[<a class="spec-reference" href="#ref:RFC6901">RFC6901</a>] (<code>[[spec-inform:RFC6901]]</code>)</li>
+<li>[<a class="spec-reference" href="#ref:RFC7230">RFC7230</a>] (<code>[[spec-inform:RFC7230]]</code>)</li>
+</ul>
+<h3 id="default-references"><a class="toc-anchor" href="#default-references" >§</a> Default References</h3>
+<p>This is what is printed out when you include the <code>[[spec]]</code> custom token in your Markdown:</p>
+<p>
+<dl class="reference-list">
+        <dt id="ref:RFC3548">RFC3548</dt>
+        <dd>
+          <cite><a href="https://tools.ietf.org/html/rfc3548">The Base16, Base32, and Base64 Data Encodings</a></cite>. 
+          S. Josefsson, Ed.; 2003-07. <span class="reference-status">Status: Informational</span>.
+        </dd>
+      
+        <dt id="ref:RFC7518">RFC7518</dt>
+        <dd>
+          <cite><a href="https://tools.ietf.org/html/rfc7518">JSON Web Algorithms (JWA)</a></cite>. 
+          M. Jones; 2015-05. <span class="reference-status">Status: Proposed Standard</span>.
+        </dd>
+      
+</dl>
+</p>
+<h3 id="normative-references"><a class="toc-anchor" href="#normative-references" >§</a> Normative References</h3>
+<p>This is what is printed out when you include the <code>[[spec-norm]]</code> custom token in your Markdown:</p>
+<p>
+<dl class="reference-list">
+        <dt id="ref:DID-CORE">DID-CORE</dt>
+        <dd>
+          <cite><a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers (DIDs) v1.0</a></cite>. 
+          Drummond Reed; Manu Sporny; Markus Sabadello; Dave Longley; Christopher Allen; Jonathan Holt; 2020-09-07. <span class="reference-status">Status: WD</span>.
+        </dd>
+      
+        <dt id="ref:DID-SPEC-REGISTRIES">DID-SPEC-REGISTRIES</dt>
+        <dd>
+          <cite><a href="https://www.w3.org/TR/did-spec-registries/">DID Specification Registries</a></cite>. 
+          Orie Steele; Manu Sporny; 2020-06-18. <span class="reference-status">Status: NOTE</span>.
+        </dd>
+      
+</dl>
+</p>
+<h3 id="informative-references"><a class="toc-anchor" href="#informative-references" >§</a> Informative References</h3>
+<p>This is what is printed out when you include the <code>[[spec-inform]]</code> custom token in your Markdown:</p>
+<p>
+<dl class="reference-list">
+        <dt id="ref:RFC6901">RFC6901</dt>
+        <dd>
+          <cite><a href="https://tools.ietf.org/html/rfc6901">JavaScript Object Notation (JSON) Pointer</a></cite>. 
+          P. Bryan, Ed.; K. Zyp; M. Nottingham, Ed.; 2013-04. <span class="reference-status">Status: Proposed Standard</span>.
+        </dd>
+      
+        <dt id="ref:RFC7230">RFC7230</dt>
+        <dd>
+          <cite><a href="https://httpwg.org/specs/rfc7230.html">Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</a></cite>. 
+          R. Fielding, Ed.; J. Reschke, Ed.; 2014-06. <span class="reference-status">Status: Proposed Standard</span>.
+        </dd>
+      
+</dl>
+</p>
+
+                    </article>    
+      
+                  </main>
+      
+                  <slide-panels id="slidepanels">
+                    <slide-panel id="repo_issues" options="right">
+                      <header class="panel-header">
+                        <span>
+                          <svg icon><use xlink:href="#svg-github"></use></svg>
+                          <span issue-count></span>
+                        </span>
+                        <span class="repo-issue-toggle" panel-toggle="repo_issues">✕</span>
+                      </header>
+                      <ul id="repo_issue_list"></ul>
+                    </slide-panel>
+      
+                    <slide-panel id="toc">
+                      <header class="panel-header">
+                        <span>Table of Contents</span>
+                        <span panel-toggle="toc">✕</span>
+                      </header>
+                      <div id="toc_list">
+                        <ul class="toc">
+<li><a href="#abstract" >Abstract</a></li>
+<li><a href="#getting-started" >Getting Started</a></li>
+<li><a href="#table-of-contents" >Table of Contents</a></li>
+<li><a href="#term-references" >Term References</a>
+<ul>
+<li><a href="#definition-lists" >Definition Lists</a></li>
+<li><a href="#table-defined-terms" >Table-defined Terms</a></li>
+</ul>
+</li>
+<li><a href="#notices" >Notices</a></li>
+<li><a href="#tables" >Tables</a></li>
+<li><a href="#sequence-diagrams" >Sequence Diagrams</a></li>
+<li><a href="#flows" >Flows</a></li>
+<li><a href="#charts" >Charts</a></li>
+<li><a href="#syntax-highlighting" >Syntax Highlighting</a></li>
+<li><a href="#tab-panels" >Tab Panels</a></li>
+<li><a href="#fancy-links" >Fancy Links</a>
+<ul>
+<li><a href="#github" >GitHub</a></li>
+</ul>
+</li>
+<li><a href="#external-spec-references" >External Spec References</a>
+<ul>
+<li><a href="#default-references" >Default References</a></li>
+<li><a href="#normative-references" >Normative References</a></li>
+<li><a href="#informative-references" >Informative References</a></li>
+</ul>
+</li>
+</ul>
+
+                      </div>
+                    </slide-panel>
+                    
+                  </slide-panels>
+      
+                </body>
+                <script>window.specConfig = {"title":"Spec-Up Standalone Example","spec_directory":"./spec_dev/single-file-test/","output_path":"./spec_site/single","logo":"assets/default/logo.svg","logo_link":"https://github.com/csuwildcat/spec-up","source":{"host":"github","account":"csuwildcat","repo":"spec-up"},"assets":[{"path":"/custom-assets/custom.css"},{"path":"/custom-assets/custom-head.js","inject":"head"},{"path":"/custom-assets/custom-body.js","inject":"body"}],"destination":"./spec_site/single/"}</script>
+                <script src="assets/js/markdown-it.js" data-manual></script><script src="assets/js/prism.js" data-manual></script><script src="assets/js/mermaid.js" data-manual></script><script src="assets/js/chart.js" data-manual></script><script src="assets/js/font-awesome.js" data-manual></script><script src="assets/js/popper.js" data-manual></script><script src="assets/js/tippy.js" data-manual></script><script src="assets/js/index.js" data-manual></script><script src="/custom-assets/custom-body.js"></script>
+              </html>
+            

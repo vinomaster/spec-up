@@ -1,12 +1,14 @@
 
 :root {
 
-  --base-theme-color: 207, 71%;
-  --themed-element-bk: hsl(var(--base-theme-color), 40%);
+/* ToIP Layout Colors */
+  --base-theme-color: 225, 100%;
+  --themed-element-bk: hsl(var(--base-theme-color), 38%);
   --themed-element-text: #fff;
   --themed-element-border: 1px solid hsl(var(--base-theme-color), 26%);
-  --themed-heading-text: hsl(var(--base-theme-color), 30%);
-  
+  --themed-heading-text: hsl(var(--base-theme-color), 38%);
+/* end - ToIP Layout Colors */
+
   --no-color: 255,255,255;
   --dim-color: 225,225,225;
   --low-color: 200,200,200;
@@ -46,9 +48,9 @@
   --header-border-inverse: rgba(var(--no-color), 0.3);
 
   --text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-  
+
   --svg-size: 2vw;
-  
+
   --font-size: 14px;
 }
 
@@ -583,7 +585,7 @@ pre[class*="language-"] {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0.5em; 
+    padding: 0.5em;
   }
 
   #logo img {
@@ -645,7 +647,7 @@ pre[class*="language-"] {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 }
-  #repo_issue_list::-webkit-scrollbar { 
+  #repo_issue_list::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
   }
 
@@ -837,7 +839,7 @@ pre[class*="language-"] {
     max-width: none;
     padding: 0.5em 1.25em 1.5em 1.25em;
   }
- 
+
   #header {
     margin: -0.5em -1.25em 0em -1.25em;
   }

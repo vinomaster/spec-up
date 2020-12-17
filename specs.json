@@ -2,10 +2,10 @@
 {
   "specs": [
     {
-      "title": "Spec-Up Example",
-      "spec_directory": "./single-file-test",
-      "output_path": "./",
-      "logo": "logo.svg",
+      "title": "Spec-Up Standalone Example",
+      "spec_directory": "./spec_dev/single-file-test",
+      "output_path": "./spec_site/single",
+      "logo": "assets/default/logo.svg",
       "logo_link": "https://github.com/csuwildcat/spec-up",
       "source": {
         "host": "github",
@@ -20,20 +20,49 @@
     },
     {
       "title": "Spec-Up Multi-File Example",
-      "spec_directory": "./multi-file-test",
+      "spec_directory": "./spec_dev/multi-file-test",
+      "output_path": "./spec_site/multi",
+      "logo": "assets/default/logo.svg",
+      "logo_link": "https://github.com/csuwildcat/spec-up",
+      "source": {
+        "host": "github",
+        "account": "csuwildcat",
+        "repo": "spec-up"
+      },
       "markdown_paths": [
         "header.md",
         "abstract.md",
         "getting-started.md",
         "features.md"
       ],
-      "logo": "../logo.svg",
-      "logo_link": "https://github.com/csuwildcat/spec-up",
+      "assets": [
+        { "path": "/custom-assets/custom.css" },
+        { "path": "/custom-assets/custom-head.js", "inject": "head" },
+        { "path": "/custom-assets/custom-body.js", "inject": "body" }
+      ]
+    },
+    {
+      "title": "ToIP TSS0000 SpecName",
+      "spec_directory": "./spec_dev/toip",
+      "output_path": "./spec_site/toip",
+      "logo": "assets/toip/toip-logo.svg",
+      "logo_link": "https://github.com/trustoverip/spec-up",
       "source": {
         "host": "github",
-        "account": "csuwildcat",
+        "account": "trustoverip",
         "repo": "spec-up"
-      }
+      },
+      "markdown_paths": [
+        "header.md",
+        "abstract.md",
+        "getting-started.md",
+        "features.md"
+      ],
+      "assets": [
+        { "path": "/custom-assets/custom.css" },
+        { "path": "/custom-assets/custom-head.js", "inject": "head" },
+        { "path": "/custom-assets/custom-body.js", "inject": "body" }
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 Spec-Up Example
 ==================
 
-**Specification Status:** Draft
+**Specification Status:** proposal
 
 **Latest Draft:**
   [https://identity.foundation/spec-up](https://identity.foundation/spec-up)
@@ -29,7 +29,7 @@ Using Spec-Up is easy peasy lemon squeezy:
 
     - **`spec_directory`** _(STRING, required)_ - You must specify the project root relative location of your spec's markdown file directory. You ****MUST**** name your spec's markdown file `spec.md` and locate it in your `spec_directory` for the tool to automatically find and use it for rendering. If you want to use a different name for the markdown file, or you have multiple markdown files you would like the tool to assemble into one document, you must specify them using the optional`markdown_paths` field described below.
     - **`title`** _(STRING, required)_ - You must add a title for your spec, which will be rendered in the generated document's H1 text and page title.
-    - **`markdown_paths`** _(ARRAY, optional)_ - If you want to name your spec's markdown file something other than `spec.md`, or you have multiple files you would like assembled into a single output document, you must specify their paths as array entries in the order you would like them assembled. The paths in this array are assumed to be based on the `spec_directory` you specified, so _DO NOT_ repeat the full root relative path. 
+    - **`markdown_paths`** _(ARRAY, optional)_ - If you want to name your spec's markdown file something other than `spec.md`, or you have multiple files you would like assembled into a single output document, you must specify their paths as array entries in the order you would like them assembled. The paths in this array are assumed to be based on the `spec_directory` you specified, so _DO NOT_ repeat the full root relative path.
     - **`output_path`** _(STRING, optional)_ - If you want the generated spec document to be output to a different location than the `spec_directory` you specified (e.g. the project root for GitHub Pages publishing) you can specify another root relative path (use `./` for root), and the tool will write the document file there instead.
 3. In your main node.js file, drop in this bad boy: `require('spec-up')()`
 
@@ -348,7 +348,7 @@ graph TD
 {
   "@context": "https://www.w3.org/ns/did/v1",
   "id": "did:example:123456789abcdefghi",
-  "authentication": [{ 
+  "authentication": [{
     "id": "did:example:123456789abcdefghi#keys-1",
     "type": "RsaVerificationKey2018",
     "controller": "did:example:123456789abcdefghi",
@@ -367,7 +367,7 @@ graph TD
 The KaTeX math engine is used for TeX rendering. You can find a list of supported features and examples here: https://katex.org/docs/supported.html.
 
 
-$$\begin{pmatrix}x_2 \\ y_2 \end{pmatrix} = 
+$$\begin{pmatrix}x_2 \\ y_2 \end{pmatrix} =
 \begin{pmatrix} A & B \\ C & D \end{pmatrix}\cdot
 \begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$$
 
@@ -434,7 +434,7 @@ Spec-Up automatically upgrades the links of certain sites, like GitHub. GitHub i
 
 ## External Spec References
 
-You can reference external specifications from IETF, W3C, and WHATWG as follows: 
+You can reference external specifications from IETF, W3C, and WHATWG as follows:
 
 1. Anywhere in your document you want to referece an external specification, use the `spec`-prefixed custom token format: `[[spec:RFC4122]]`
 2. Wherever in your document you want to print out all your external specification references, use the `spec` custom token format _without any spec name_: `[[spec]]`
